@@ -197,6 +197,38 @@ a {
   margin: 0;
 }
 
+.legalPage {
+  width: min(860px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.legalPage h1 {
+  margin: 0 0 12px;
+  font-size: 48px;
+}
+
+.legalDate {
+  margin: 0 0 40px;
+  color: #94a3b8;
+}
+
+.legalPage section {
+  padding: 28px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.legalPage h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.legalPage p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
 @media (max-width: 800px) {
   .page {
     width: min(100% - 28px, 1100px);
@@ -238,5 +270,14 @@ a {
   .footer {
     width: min(100% - 28px, 1100px);
     flex-direction: column;
+  }
+  
+  .legalPage {
+    width: min(100% - 28px, 860px);
+    padding: 48px 0;
+  }
+
+  .legalPage h1 {
+    font-size: 36px;
   }
 }
