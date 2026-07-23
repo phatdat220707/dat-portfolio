@@ -229,6 +229,57 @@ a {
   line-height: 1.7;
 }
 
+.contactForm {
+  max-width: 640px;
+  margin-top: 32px;
+  display: grid;
+  gap: 18px;
+}
+
+.formGroup {
+  display: grid;
+  gap: 8px;
+}
+
+.formGroup label {
+  color: #e5e7eb;
+  font-weight: 700;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background: #111827;
+  color: #e5e7eb;
+  font: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.contactForm button {
+  width: fit-content;
+  padding: 12px 18px;
+  border: 1px solid #38bdf8;
+  border-radius: 6px;
+  background: #38bdf8;
+  color: #0f172a;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.formMessage {
+  color: #86efac;
+  font-weight: 700;
+}
+
 @media (max-width: 800px) {
   .page {
     width: min(100% - 28px, 1100px);
@@ -271,7 +322,7 @@ a {
     width: min(100% - 28px, 1100px);
     flex-direction: column;
   }
-  
+
   .legalPage {
     width: min(100% - 28px, 860px);
     padding: 48px 0;

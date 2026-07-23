@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 export default function Contact() {
   return (
     <section className="section contact" id="contact">
@@ -15,6 +17,8 @@ export default function Contact() {
           GitHub
         </a>
       </div>
+      
+      <ContactForm />
     </section>
   );
 }
