@@ -411,12 +411,12 @@ a:focus-visible {
     scroll-behavior: auto;
   }
 
-  .projectCard,
-  .contactLinks a {
-    transition: noe;
-  }
+.projectCard,
+.contactLinks a {
+  transition: none;
+}
 
-  .projectCard:hover {
+.projectCard:hover {
     transform: none;
   }
 }
