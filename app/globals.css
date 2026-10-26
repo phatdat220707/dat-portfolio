@@ -240,3 +240,183 @@ a {
     flex-direction: column;
   }
 }
+
+
+/* ========================================
+   Portfolio UI refinements
+   ======================================== */
+
+/* Smooth anchor navigation */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+/* More readable About section */
+#about > p + p {
+  margin-top: 20px;
+}
+
+/* Consistent project cards */
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.projectCard:hover {
+  border-color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* Keep links near the bottom of each card */
+.projectCard > div:last-child {
+  margin-top: auto !important;
+  padding-top: 20px;
+}
+
+.projectCard a {
+  color: #7dd3fc;
+  font-weight: 700;
+}
+
+.projectCard a:hover {
+  text-decoration: underline;
+}
+
+/* Contact links as buttons */
+.contactLinks a {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 16px;
+  border: 1px solid #38bdf8;
+  border-radius: 6px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.contactLinks a:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+/* Accessible keyboard navigation */
+a:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 4px;
+}
+
+/* Remove extra footer separator */
+.footer {
+  border-top: 0;
+}
+
+/* ========================================
+   Responsive improvements
+   ======================================== */
+
+@media (max-width: 800px) {
+  section[id] {
+    scroll-margin-top: 125px;
+  }
+
+  .hero {
+    min-height: 65vh;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 7vw, 42px);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+
+  .heroText {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+
+  .section > p {
+    font-size: 16px;
+  }
+
+  .projectCard {
+    padding: 20px;
+  }
+
+  .siteHeader nav a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 12px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 0 64px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .heroActions a {
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .skill {
+    font-size: 13px;
+    padding: 8px 11px;
+  }
+
+  .contactLinks {
+    gap: 10px;
+  }
+
+  .contactLinks a {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .projectCard,
+  .contactLinks a {
+    transition: noe;
+  }
+
+  .projectCard:hover {
+    transform: none;
+  }
+}
